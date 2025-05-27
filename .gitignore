@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyt
+*.log
+
+# Banco de dados local
+*.sqlite3
+
+# Django migrations (opcional ignorar se quiser manter versionamento)
+**/migrations/*.pyc
+**/migrations/__pycache__/
+# Descomente a próxima linha se quiser ignorar arquivos de migração:
+# **/migrations/*.py
+
+# Ambientes virtuais
+env/
+venv/
+ENV/
+VENV/
+.venv/
+.ENV/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# VS Code / IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos de configuração locais
+*.env
+.env
+.env.*
+
+# Arquivos temporários e caches
+*.bak
+*.swp
+*.tmp
+*.~ 
+
+# Pasta de arquivos estáticos gerados
+staticfiles/
+static_root/
+media/
