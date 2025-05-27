@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #alerta{
+            color: white;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    {% for message in messages %}
+
+       <h3>{{ message }}</h3> 
+   
+    {% endfor %}
+
+
+    <h1>Faz o teu Login</h1>
+    <form action="{% url 'resultado_login' %}" method="post"> {% csrf_token %}
+        <input type="text" placeholder="Nome" name="nif">
+        <input type="password" placeholder="Senha" name="senha">
+        <button>Entrar</button>
+    </form>
+
+    <a href="{% url 'home' %}">Voltar</a>
+
+
+  <script>
+        if(performance.navigation.type===2){
+            window.location.href
+        }
+  </script>
+ 
+</body>
+</html>

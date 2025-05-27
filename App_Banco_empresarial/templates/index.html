@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkBank🌐</title>
+    <style>
+        @font-face {
+            font-family: 'logotipo';
+            src: url("{% static 'media/logotype.otf' %}") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'astra';
+            src: url("{% static 'media/Astra.otf' %}") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
+
+        body{
+            background: #F2F4F7;
+        
+
+        }
+
+        .main{
+            width: 100%;
+
+            background-position: center;
+            background-size:cover;
+            height: 85vh;
+        }
+        nav{
+            display: flex;
+          height: 75px;
+          width: 1200px;
+          margin: auto;
+          justify-content: space-between;
+        }
+        #icon{
+        width: 300px;
+        height: 70px;
+        margin-top: 60px;
+        margin-left: 0px;
+        float: left;
+        
+        }
+
+        #logo{
+            font-family: logotipo;
+            color: blue;
+            font-size: 45px;
+            font-weight: bold;
+            
+        }
+        ul{
+            display: flex;
+            gap: 67px;
+            align-items: center;
+        }
+        li{
+            list-style: none;
+            margin-left: 80px;
+            padding-top: 20px;
+            padding-bottom: 25px;
+            margin-top: 27px;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(97, 96, 96);
+            font-size: 16px;
+            font-family: Arial;
+            transition: 0.1s ease-in-out;
+
+        }
+
+        #a:hover{
+            color: blue;
+            
+      
+        }
+
+        #a::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 0;
+            background-color: blue;
+            
+
+        }
+
+        #a1::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 100%;
+            background-color: blue;
+            transition: 0.3s;
+
+        }
+
+        #a1{
+            color: blue;
+        }
+
+        #a:hover::after{
+            width: 100%;
+            transition: width 0.3s linear;
+        }
+
+        #menu{
+            padding-top: 10px;
+        }
+
+
+
+        #texto{
+            margin: auto;
+            position: relative;
+            height: auto;
+            width: 1200px;
+            margin-top: 6%;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        p{
+            color: rgb(73, 73, 73);
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            margin-left: 20px;
+            line-height: 25px;
+            padding-top: 25px;
+            padding-bottom:30px ;
+        }
+        button{
+            background-color:  rgb(11, 179, 11);
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 13px 33px 13px 33px ;
+            transition: 0.5s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+        #bt:hover{
+            
+            background-color: blue;
+
+        }
+        #bt{
+            padding: 13px 75px 13px 75px ;
+        }
+        button:hover{
+            background: blue;
+        }
+
+        form{
+
+           position: absolute;
+           background: white;
+           position: absolute;
+           box-shadow: 1px 1px 20px rgb(66, 66, 66);
+           width: 34%;
+           height: 64%;
+           top:20%;
+           left: 800px;
+           border-radius: 11px;
+        }
+
+
+
+        h3{
+            width: 210px;
+            font-size: 27px;
+            font-weight: bold;
+            color: blue;
+            font-family: sans-serif;
+            text-align: center;
+            background-color: white;
+            
+            margin-top: 25px;
+            margin-bottom: 32px;
+            border-radius: 10px;
+            padding: 7px;
+        }
+
+        input{
+            height: 34px;
+            width: 295px;
+            background: transparent;
+            border: solid 1.5px blue ;
+    
+            font-size: 16px;
+            color: rgb(70, 69, 69); 
+       
+            margin-bottom: 15px;
+      
+            padding: 7px;
+            border-radius: 3px;
+            margin-right: 14px;
+        }
+
+
+        h4{
+            padding-top: 22px;
+            
+            color:rgb(22, 20, 20);
+            color: white;
+        }
+
+        #simbolo{
+          margin-left:-47px;
+          margin-bottom:-7px;
+        }
+
+        #esq{
+            color: blue;
+        }
+
+        #input1{
+            margin-bottom: 50px;
+        }
+
+        footer{
+            height: 65%;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+           
+            margin-top: 50px;
+            background-color: white;
+        }
+
+        p #esq{
+            margin-top: 10px;
+        }
+        #conta{
+            background-color: rgb(11, 179, 11);
+            cursor: pointer;
+        }
+
+        #conta:hover{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div id="texto">
+            <div id="icon">
+                <span id="logo">LinkBank🌐</span>
+            </div>
+          <P>Este é uma site que tem  como obejetivo de<br> ajudar e facilitar os nossos utilizadores no <br> gerenciamento de recursos finaceiros, na procura<br> de trabalhadores e  na procura de empregos e proposta <br> <a href="{% url 'serviço' %}" id="esq">Queres mais imformações?</a></P>
+          <a href="{% url 'formulario' %}"><button id="conta">CRIAR CONTA</button></a>
+        </div>
+     
+        <form action="{% url 'resultado_login' %}" method="post" > {% csrf_token %}
+            <center>
+            <h3>LOGA AQUI</h3>
+            
+            <input type="text" placeholder="Nome" name="nif" autocomplete="off" id="input1">
+            <img id='simbolo' src="{% static 'media/bx-user.svg' %}"/>
+            
+            <input type="password" placeholder="Senha" name="senha">
+            <img id='simbolo' src="{% static 'media/bx-lock-alt.svg' %}"/>
+            <center>
+            <button id="bt">ENTRAR</button></center>
+            <h4 ><a href="{% url 'esqueceu' %}" id="esq">Esqueceu a senha ?</a></h4></center>
+            
+        </form>
+    </div>
+
+
+   
+      
+
+
+</body>
+</html> 

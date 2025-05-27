@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Cadastro feito com sucesso!</h2>
+    <br>
+    <h4>NIF: {{nif}}</h4>
+    <h4>Nome: {{nome}}</h4>
+    <h4>Nome Propetario: {{nome_propet}}</h4>
+    <h4>Seu Email: {{e_mail}}</h4>
+    <h4>Seu numero de telefone 1: {{numero1}}</h4>
+    <h4>Seu numero de telefone 2: {{numero2}}</h4>
+    <h4>Sua senha: {{senha}}</h4>
+    <h4>Numero da sua conta: {{Nconta2}}</h4>
+
+    <a href="{% url 'home' %}">Voltar</a><br>
+    <a href="{% url 'login' %}">Login</a>
+    
+</body>
+</html>

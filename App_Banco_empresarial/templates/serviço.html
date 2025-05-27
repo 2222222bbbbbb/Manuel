@@ -1,0 +1,408 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <style>
+        @font-face {
+            font-family: 'logotipo';
+            src: url("{% static 'media/logotype.otf' %}") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'astra';
+            src: url("{% static 'media/Astra.otf' %}") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }        
+         *{
+            margin: 0;
+      
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+                body{
+            background: #F2F4F7;
+            background-color: white;
+
+        }
+
+
+        .main{
+            width: 100%;
+
+            background-position: center;
+            background-size:cover;
+            height: 150vh;
+            margin-top: 0px;
+        }
+        #nav{
+            background-color: #CBD2D9;
+       background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+        }
+        #icon{
+        width: 200px;
+        height: 65px;
+        float: left;
+        }
+
+        #logo{
+            position: fixed;
+            color: blue;
+            font-size: 32px;
+            padding-top: 17px;
+            font-family: logotipo;
+            margin-left: 50px;
+        }
+        ul{
+            display: flex;
+            gap: 75px;
+            margin-right: 65px;
+            align-items: center;
+        }
+        li{
+            list-style: none;
+            font-size: 18px;
+      
+        }
+        a{
+            text-decoration: none;
+            color: rgb(71, 70, 70);
+           
+            font-family: Arial;
+            transition: 0.4s ease-in-out;
+
+        }
+
+        #a:hover{
+            color: blue;
+            
+      
+        }
+
+        #a::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 0;
+            background-color: blue;
+            transition: 0.3s;
+
+        }
+
+        #a1::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 100%;
+            background-color: blue;
+            transition: 0.3s;
+
+        }
+
+        #a1{
+            color: blue;
+        }
+
+        #a:hover::after{
+            width: 100%;
+            transition: width 0.4s linear;
+        }
+
+        #menu{
+          
+            display: flex;
+            justify-content: end;
+            padding-bottom: 28px;
+            padding-top:28px;
+            padding-right: 30px;
+         
+        }
+
+        #span{
+            color: rgb(31, 30, 30);
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 42px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #texto{
+            margin: auto;
+            position: relative;
+            height: auto;
+            width: 1200px;
+           position: relative;
+           top: -70%;
+            flex-direction: column;
+            
+        }
+
+
+        button{
+            background-color: #ff7200;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 13px 33px 13px 33px ;
+            transition: 0.5s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+        #bt:hover{
+            color: #ff7200;
+            background-color: white;
+
+        }
+        #bt{
+            padding: 13px 75px 13px 75px ;
+        }
+        button:hover{
+            background: blue;
+        }
+
+        #form{
+           height: 480px;
+           
+           width: 390px;
+           transition: transform 0.5s ease-in-out;
+           background: rgb(246, 246, 247);
+           cursor: pointer;
+           
+
+           border-radius: 19px;
+        }
+
+        h3{
+            
+            font-size: 26px;
+        
+            color: rgb(36, 35, 35);
+            font-family: sans-serif;
+           
+            margin-left: 16px;
+            
+            margin-top: 1px;
+            
+            border-radius: 10px;
+            padding: 8px;
+            padding-top: 30px;
+        }
+
+        #conteudo{
+            display: flex;
+            gap: 100px;
+            margin-top: -66%;
+            flex-direction: column;
+        }
+        #texto_conteudo{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        img{
+            
+            width: 100%;
+            border-radius: top 10px;
+            height:290px ;
+            border-radius: 15px 15px 10px 10px;
+            padding-bottom: 8px;
+        }
+        
+        #tema{
+            
+            border-radius: 10px 10px 0px 0px;
+            border-bottom: none;
+        }
+        #chat{
+            padding-bottom: 25px;
+        }
+
+        #form:hover{
+            transform: scale(1.14);
+        }
+
+        video{
+            width: 100%;
+        }
+
+        h5{
+            color: rgb(34, 34, 34);
+            font-size: 35px;
+            font-weight: bold;
+            margin-left: 27px;
+            margin-top: 5rem;
+            font-family: sans-serif;
+            
+        }
+
+        p{
+            margin-left: 27px;
+            font-size: 16px;
+            color: #3d3d3d;
+            line-height: 25px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        #dispidida{
+            text-align: center;
+            font-size: 16px;
+            font-family: astra;
+            margin-top: -6%;
+            margin-bottom: 35px;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+        <div id="nav">
+            <div id="icon">
+                <h2 id="logo">LinkBank🌐</h2>
+            </div>
+
+            <div id="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}" id="a">Pagina inicial</a></li>
+                    <li><a href="{% url 'serviço' %}" id="a1">Serviços</a></li>
+                    <li><a href="{% url 'sobre' %}" id="a">Sobre-nos</a></li>
+                    <li><a href="{% url 'contata' %}" id="a" >Contata-nos</a></li>
+                    <li><a href="{% url 'formulario' %}" id="a">Criar-Conta</a></li>
+                    
+                </ul>
+
+            </div>
+          
+        </div>
+        <video autoplay src="{% static 'media/video1.mp4' %}" autoplay muted ></video>
+
+        <h5 id="serviço">Conheça os nossos serviços</h5>
+        <p>Aproveite criar a sua conta para explorar  os nossos serviços</p>
+    <div class="main">
+        
+        <div id="texto">
+          <span  id="span">Temos diversos serviços que <br> torna mais mais fácio algumas <br>  atividades humanas </span>
+          
+        </div>
+        </div>
+        </div>
+        <div id="conteudo">
+            <div id="texto_conteudo">
+        <div id="form"> 
+            
+            <div id="tema">
+      
+            <img src="{% static 'media/imagem4.jpeg' %}" alt=""></div>
+            <h3>Intertenimento</h3>
+            <P>Este é uma site que tem  no  gerenciamento de<br>  recursos finaceiros, na procura
+            
+        </div>
+
+        <div id="form"> 
+ 
+            <div id="tema">
+            
+            <img src="{% static 'media/imagem3.jpg' %}" alt=""></div>
+            <h3>Conversar</h3>
+           <P>Este é uma site que tem  no  gerenciamento de<br>  recursos finaceiros, na procura
+        </div>
+
+        <div id="form"> 
+      
+            <div id="tema">
+    
+            <img src="{% static 'media/images5.jpeg' %}" alt=""></div>
+            <h3>Marketing</h3>
+            <P>Este é uma site que tem  no  gerenciamento de<br>  recursos finaceiros, na procura
+        </div>
+
+
+    </div>
+    <div id="texto_conteudo">
+
+
+        <div id="form"> 
+
+            <div id="tema">
+            
+            <img src="{% static 'media/images10.jpeg' %}" alt=""></div>
+            
+            <h3>Encontrar negocio</h3>
+            <P>Este é uma site que tem  no  gerenciamento de<br>  recursos finaceiros, na procura
+
+        </div>
+
+        <div id="form"> 
+
+            <div id="tema">
+            
+         <img src="{% static 'media/images6.jpeg' %}" alt=""></div>
+            
+            <h3>Recursos humanos</h3>
+            <P>Este é uma site que tem  no  gerenciamento de<br>  recursos finaceiros, na procura
+        </div>
+
+        <div id="form"> 
+    
+            <div id="tema">
+        
+           <img src="{% static 'media/images8.jpeg' %}" alt=""></div>
+            
+             <h3>Gerir empresa</h3>
+            <P>Este é uma site que tem  no  gerenciamento de<br>  recursos finaceiros, na procura
+       
+        </div>
+    </div>
+
+        <div id="texto_conteudo">
+                    <div id="form"> 
+
+            <div id="tema">
+        
+           <img src="{% static 'media/images9.jpeg' %}" alt=""></div>
+            
+             <h3>Encontrar empregos</h3>
+            <P>Este é uma site que tem  no  gerenciamento de<br>  recursos finaceiros, na procura
+        </div>
+        <div id="form"> 
+     
+            <div id="tema">
+           
+           <img src="{% static 'media/images7.jpeg' %}" alt=""></div>
+        
+         <h3>Gerir conta-bancaria</h3>
+            <P>Este é uma site que tem  no  gerenciamento de<br>  recursos finaceiros, na procura
+        </div>
+
+                <div id="form"> 
+
+            <div id="tema">
+            
+            <img src="{% static 'media/images11.jpeg' %}" alt=""></div>
+            <h3>Publicar</h3>
+            <P>Este é uma site que tem  no  gerenciamento de<br>  recursos finaceiros, na procura
+        </div>
+        </div>
+<br>
+
+<div id="dispidida">
+    Obrigado pela atencao!
+</div>
+
+</body>
+</html>

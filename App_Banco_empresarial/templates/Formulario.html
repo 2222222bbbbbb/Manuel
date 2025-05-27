@@ -1,0 +1,477 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIAR CONTA</title>
+    <style>
+         @font-face {
+            font-family: 'logotipo';
+            src: url("{% static 'media/logotype.otf' %}") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'astra';
+            src: url("{% static 'media/Astra.otf' %}") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
+
+        body{
+            background: #F2F4F7;
+            height: 63rem;
+            
+
+        }
+
+        .main{
+            width: 100%;
+            
+            background-position: center;
+            background-size:cover;
+            height: 90vh;
+        }
+        nav{
+            display: flex;
+          height: 75px;
+          width: 1200px;
+          margin: auto;
+          justify-content: space-between;
+        }
+
+
+     
+     
+
+        #logo{
+            color: blue;
+            font-size: 50px;
+            margin-bottom: 5px;
+            padding-top: 30px;
+            display: flex;
+           justify-content: center;
+           font-family: logotipo;
+          
+        }
+        ul{
+            display: flex;
+            gap: 67px;
+            align-items: center;
+        }
+        li{
+            list-style: none;
+            margin-top: 27px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-family: Arial;
+            transition: 0.1s ease-in-out;
+
+        }
+
+        #a:hover{
+            color: blue;
+            
+      
+        }
+
+        #a::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 0;
+            background-color: blue;
+            
+
+        }
+
+        #a1::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 100%;
+            background-color: blue;
+            transition: 0.3s;
+
+        }
+
+        #a1{
+            color: blue;
+        }
+
+        #a:hover::after{
+            width: 100%;
+            transition: width 0.3s linear;
+        }
+
+        #menu{
+            padding-top: 10px;
+        }
+
+        #span{
+            color: #ff7200;
+            
+            font-size: 37px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #span{
+            color: #ff7200;
+            display: flex;
+            justify-content: center;
+            font-size: 37px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #texto{
+            margin: auto;
+            position: relative;
+            height: auto;
+            width: 1200px;
+            margin-top: 11%;
+            flex-direction: column;
+            
+        }
+
+        p{
+            color: rgb(48, 47, 47);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            margin-left: 20px;
+            line-height: 25px;
+            padding-top: 25px;
+            padding-bottom:30px ;
+        }
+        button{
+            background-color: rgb(11, 179, 11);
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 13px 33px 13px 33px ;
+            transition: 0.5s ease-in-out;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+        #bt:hover{
+      
+            background-color: blue;
+
+        }
+        #bt{
+            padding: 13px 94px 13px 94px ;
+        }
+        button:hover{
+            background: blue;
+        }
+
+        #form{
+           height: 135%;
+           width: 46%;
+        
+           display:flex;
+           justify-content: center;
+           margin: auto;
+           margin-bottom: 50px;
+           position: relative;
+           margin-top: 20px;
+
+           border-radius: 11px;
+
+
+
+
+           
+
+     
+           background: white;
+      
+           box-shadow: 1px 1px 20px rgb(66, 66, 66);
+
+        
+        }
+
+        h3{
+            width: 290px;
+            font-size: 28px;
+            font-weight: bold;
+            color: black;
+            font-family: sans-serif;
+            text-align: center;
+            background-color: white;
+            
+            margin-top: 26px;
+            margin-bottom: 31px;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        input{
+            height: 33px;
+            width: 240px;
+            background: transparent;
+            border: solid 1.5px blue ;
+    
+            font-size: 16px;
+            color: black; 
+
+            margin-bottom: 23px;
+       
+            padding: 7px;
+            border-radius: 5px;
+            margin-right: 13px;
+        }
+
+        #selete1{
+            height: 60px;
+            width: 258px;
+            background: transparent;
+            border: solid 1.5px blue;
+            margin-top: 21px;
+            font-size: 16px;
+            color: black; 
+             border-radius: 5px;
+            margin-right: 10px;
+            padding: 7px;
+            border-radius: 3px;
+            
+        }
+ 
+        #selete2{
+            height: 53px;
+            width: 257px;
+            background: transparent;
+            border: solid 1.5px blue ;
+             border-radius: 5px;
+            font-size: 16px;
+            color: black; 
+
+            margin-right: 11px;
+            padding: 7px;
+            border-radius: 3px;
+        }
+
+        h4{
+            padding-top: 22px;
+            
+            color:rgb(22, 20, 20);
+            color: white;
+        }
+
+        #simbolo{
+          margin-left:-47px;
+          margin-bottom:-7px;
+        }
+
+        #esq{
+            color: blue;
+        }
+
+         textarea{
+            height: 70px;
+            padding-top: 10px;
+            margin-left: 6px;
+            width: 250px;
+            background: transparent;
+            border: solid 1.5px blue ;
+            color: white;
+            font-size: 17px;
+            padding-left: 7px;
+             border-radius: 5px;
+           
+          
+        }
+
+        #textarea2{
+          margin-top: 23px;
+           border-radius: 5px;
+          margin-bottom: 23px;
+        }
+
+        #y{
+            display: flex;
+            position: relative;
+            margin-left: 38px;
+            margin-bottom: 28px;
+        }
+
+        #menu2{
+
+            width: 29.3%;
+            height: 3.2%;
+            
+            border-radius: 15px;
+            border: solid 3.5px rgb(88, 88, 88);
+            padding: 1px 15px 15px 15px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        #b1{
+          
+            background-color: blue;
+            color: white;
+           border-right: none;
+            border-radius: 12px;
+            margin-right: 10px;
+            cursor: pointer;
+            margin-top: -0.7pt;
+         
+            padding:12px 15px 30px 15px ;
+            
+        }
+        #b2{
+            cursor: pointer;
+            color:rgb(34, 33, 33);
+            margin-bottom: 150px;
+            margin-top: -0.6px;
+            border-radius: 10px;
+            margin-left: 14.9px;
+            border-left: none;
+            padding:10.1px 15px 30px 15px ;
+            
+            
+        }
+
+        #formo2{
+            display: none;
+        }
+
+        #esq{
+            color: blue;
+           
+        }
+
+   
+
+    </style>
+</head>
+<body>
+    <div class="main">
+    <center>
+
+   
+                <h2 id="logo">LinkBank🌐</h2>
+
+
+
+
+    
+
+           
+            <p>A criação da sua conta é rapido e facil , para usufruires os nossos serviços</p> 
+          
+       </center>   
+     
+          <div id="form"> 
+            <center>
+            <h3>Cria a sua conta aqui</h3>
+            <div id="menu2">
+              
+                <a id="b1" onclick="empresa()">Empresa</a> 
+                <a id="b2"  onclick="user()">Usuario</a>
+            </div>
+            <div id="formo1">
+            <form action="{% url 'res_cadast'  %}"  method="post">{% csrf_token %}
+                <input type="text" name="nif" placeholder="NIF">
+                <input type="text" name="nome" placeholder="Nome Empresa">
+                <input type="text"  name="nome_propet" placeholder="Nome Propetario">
+                <input type="text" name="bi" placeholder="BI">
+                <input type="date" name="data_nasc" placeholder="Data Nascimento">
+                <input type="email" name="email" placeholder="E-mail">
+                <input type="number" name="telef1" name="numero" placeholder="Telefone 1">
+                <input type="number" name="telef2" name="numero" placeholder="Telefone 2">
+
+                <div id="y">
+                <select name="sexo"  id="selete1">
+                    <option value="Homem">Masculino</option>
+                    <option value="Mulher">Femenino</option>
+                </select>
+                
+                <textarea name="descric" id="" placeholder="Descrição da Empresa"></textarea>
+                
+            </div>
+                
+            <button id="bt">CADASTRAR</button>
+              <center> <a href="{% url 'home' %}" id="esq">Já tens conta?</a></center> 
+                
+                </form>
+            </div>
+
+            <div id="formo2">
+                <form action="{% url 'cadastro_cliente'  %}" method="post">{% csrf_token %}
+                    <input type="text" name="nome" placeholder="Nome Completo">
+                    <input type="text" name="bi" placeholder="BI">
+                    <input  type="date" name="data_nasc" placeholder="Data Nascimento">
+                    <input type="email" name="email" placeholder="E-mail">
+                    <input type="number" name="telef1" name="numero" placeholder="Telefone 1">
+                    <input type="number" name="telef2" name="numero" placeholder="Telefone 2">
+                    <select name="sexo"  id="selete2">
+                    <option value="Homem">Masculino</option>
+                    <option value="Mulher">Femenino</option>
+                    </select>
+                    
+                    <select name="dificiencia"  id="selete2">
+                        <option value="Não sou dificiente">Não sou dificiente</option>
+                        <option value="Sou dificiente">Sou dificiente</option>
+                        
+                    </select>
+                    <center>
+                    <textarea name="descric" id="textarea2" placeholder="Descrição da sua pessoa"></textarea>
+                </center>
+                  
+                    <button id="bt">Cadastrar</button>
+                    
+                  <center> <a href="{% url 'home' %}" id="esq">Já tens conta?</a></center>
+                    
+                    </form>
+            </div>
+            </center>
+            
+        </div>
+    </div>
+
+
+  <script>
+      var b1=document.getElementById('b1')
+      var b2=document.getElementById('b2')
+      var formo1=document.getElementById('formo1')
+      var formo2=document.getElementById('formo2')
+      function empresa() {
+       
+        b1.style.backgroundColor="blue"
+        b1.style.color="white"
+        b2.style.color="black"
+        b2.style.backgroundColor="transparent"
+        formo1.style.display="block"
+        formo2.style.display="none"
+      }
+
+      function user() {
+        b1.style.color="black"
+        b1.style.backgroundColor="transparent"
+        b2.style.backgroundColor="blue"
+        b2.style.color="white"
+        formo1.style.display="none"
+        formo2.style.display="block"
+    }
+  </script>
+</body>
+</html> 

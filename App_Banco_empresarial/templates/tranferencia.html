@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Transferencia</h2>
+    <form action="{% url 'Trans' %}" method="post"> {% csrf_token %}
+    <input type="text" placeholder="Numero da conta" name="conta">
+    <br>
+    <input type="number" placeholder="Valores a enviar" name="valor">
+    <br>
+    <input type="password" placeholder="Sua senha" name="senha">
+    <button>Transferir</button>
+
+    </form>
+    <h2>Historico</h2>
+
+    {% for cont3 in trans %}
+    <h3>Valor transferido   {{cont3.dinh2}}Kz   para   {{cont3.Enviado}}   >>>  {{cont3.hora}} </h3>
+    {% endfor %}
+</body>
+</html>

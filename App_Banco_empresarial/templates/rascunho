@@ -1,0 +1,321 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkBank🌐</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
+                body{
+            background: #F2F4F7;
+        }
+
+        .main{
+            width: 100%;
+            
+            background-position: center;
+            background-size:cover;
+            height: 100vh;
+        }
+        nav{
+            display: flex;
+          height: 75px;
+          width: 1200px;
+          margin: auto;
+          justify-content: space-between;
+        }
+        #icon{
+        width: 200px;
+        height: 70px;
+        float: left;
+        }
+
+        #logo{
+            color: blue;
+            font-size: 34px;
+            padding-top: 15px;
+            font-family: arial;
+        }
+        ul{
+            display: flex;
+            gap: 67px;
+            align-items: center;
+        }
+        li{
+            list-style: none;
+            margin-top: 27px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-family: Arial;
+            transition: 0.1s ease-in-out;
+
+        }
+
+        #a:hover{
+            color: blue;
+            
+      
+        }
+
+        #a::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 0;
+            background-color: blue;
+            
+
+        }
+
+        #a1::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 100%;
+            background-color: blue;
+            transition: 0.3s;
+
+        }
+
+        #a1{
+            color: blue;
+        }
+
+        #a:hover::after{
+            width: 100%;
+            transition: width 0.3s linear;
+        }
+
+        #menu{
+            padding-top: 10px;
+        }
+
+        #span{
+            color: #ff7200;
+            
+            font-size: 37px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #texto{
+            margin: auto;
+            position: relative;
+            height: auto;
+            width: 1200px;
+            margin-top: 11%;
+            flex-direction: column;
+            
+        }
+
+        p{
+            color: white;
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            margin-left: 20px;
+            line-height: 25px;
+            padding-top: 25px;
+            padding-bottom:30px ;
+        }
+        button{
+            background-color: #ff7200;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 13px 33px 13px 33px ;
+            transition: 0.5s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+        #bt:hover{
+            color: #ff7200;
+            background-color: white;
+
+        }
+        #bt{
+            padding: 13px 75px 13px 75px ;
+        }
+        button:hover{
+            background: blue;
+        }
+
+        form{
+           height: 380px;
+           width: 285px;
+           position: absolute;
+           background: linear-gradient(to top,rgba(53, 52, 52, 0.8)50%);
+           position: absolute;
+           
+           top:29.5%;
+           left: 868px;
+           border-radius: 11px;
+        }
+
+        h3{
+            width: 210px;
+            font-size: 19px;
+            font-weight: bold;
+            color: #ff7200;
+            font-family: sans-serif;
+            text-align: center;
+            background-color: white;
+            
+            margin-top: 25px;
+            margin-bottom: 32px;
+            border-radius: 10px;
+            padding: 7px;
+        }
+
+        input{
+            height: 33px;
+            width: 240px;
+            background: transparent;
+            border: solid 1.5px #ff7200 ;
+  
+            font-size: 16px;
+            color: white; 
+  
+            margin-bottom: 7px;
+            margin-top: 20px;
+            padding: 7px;
+            border-radius: 3px;
+            
+        }
+
+
+        h4{
+            padding-top: 22px;
+            
+            color:rgb(22, 20, 20);
+            color: white;
+        }
+
+        #simbolo{
+          margin-left:-47px;
+          margin-bottom:-7px;
+        }
+
+        #esq{
+            color: blue;
+        }
+        
+        #email{
+            margin-right: 18px;
+        }
+
+        label{
+            color: white;
+            font-weight: bold;
+           
+        }
+
+        button{
+            margin-bottom: 19px;
+        }
+
+        strong{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div id="icon">
+                <h2 id="logo">LinkBank🌐</h2>
+            </div>
+
+            <div id="menu">
+                <ul>
+                    <li><a href="" id="a">INICIO</a></li>
+                    <li><a href="{% url 'serviço' %}" id="a">SERVIÇOS</a></li>
+                    <li><a href="{% url 'sobre' %}" id="a">SOBRE-NOS</a></li>
+                    <li><a href="{% url 'esqueceu' %}" id="a1">CODIGO</a></li>
+                    
+                </ul>
+
+            </div>
+            <ul>
+                <li><a href="{% url 'contata' %}"><button>CONTATA-NOS</button></a></li>
+            </ul>
+        </nav>
+        <div id="texto">
+          <span  id="span">BEM-VINDO AO <br> NOSSO SITE</span>
+          <P>Este é uma site que tem  como obejetivo de<br> ajudar e facilitar os nossos utilizadores no <br> gerenciamento de recursos finaceiros, na procura<br> de trabalhadores e  na procura de empregos e proposta</P>
+          <a href="{% url 'formulario' %}"><button >CRIAR CONTA</button></a>
+        </div>
+     
+        <form action="{% url 'resultado_login' %}" method="post" > {% csrf_token %}
+            <center>
+            <h3>VERIFICAR CÓDIGO</h3>
+           <label for="">O codigo sera invalido dentro de
+             </label><br><label id="contador"></label><strong>s</strong>
+           <br>
+           <br>
+            <input type="number" name="telef1" name="numero" placeholder="Telefone">
+
+            <button id="bt">ENVIAR</button>
+            <h4 >Se não recebeste o codigo<br> <a href="{% url 'esqueceu' %}" id="esq">Clica Aqui</a></h4></center>
+            </center>
+
+            
+        </form>
+
+    </div>
+
+    
+    
+ 
+    <script>
+
+
+    
+    setTimeout(() => {
+        fetch('/atualizar-variavel/', {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ nova_variavel: 'novo valor' })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Variável atualizada:', data);
+        });
+        window.location.href = "{% url 'atualizar_variavel' %}"
+    }, 60000)
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    async function loop() {
+           for (let index = 59; index >=0; index--) {
+            document.getElementById("contador").innerHTML=index
+            await sleep(1000)
+            
+    }            
+            
+    }
+
+    
+    
+        
+    loop()
+        
+      
+
+ // 60000 ms = 1 minuto
+    </script>
+</body>
+</html> 

@@ -1,0 +1,359 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <style>
+        @font-face {
+            font-family: 'logotipo';
+            src: url("{% static 'media/logotype.otf' %}") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'astra';
+            src: url("{% static 'media/Astra.otf' %}") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }        
+         *{
+            margin: 0;
+      
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+                body{
+            background: #F2F4F7;
+            background-color: white;
+
+        }
+
+
+        #nav{
+            background-color: #CBD2D9;
+       background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+        }
+        #icon{
+        width: 200px;
+        height: 65px;
+        float: left;
+        }
+
+        #logo{
+            position: fixed;
+            color: blue;
+            font-size: 32px;
+            padding-top: 17px;
+            font-family: logotipo;
+            margin-left: 50px;
+        }
+        ul{
+            display: flex;
+            gap: 75px;
+            margin-right: 65px;
+            align-items: center;
+        }
+        li{
+            list-style: none;
+            font-size: 18px;
+      
+        }
+        a{
+            text-decoration: none;
+            color: rgb(71, 70, 70);
+           
+            font-family: Arial;
+            transition: 0.4s ease-in-out;
+
+        }
+
+        #a:hover{
+            color: blue;
+            
+      
+        }
+
+        #a::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 0;
+            background-color: blue;
+            transition: 0.3s;
+
+        }
+
+        #a1::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 100%;
+            background-color: blue;
+            transition: 0.3s;
+
+        }
+
+        #a1{
+            color: blue;
+        }
+
+        #a:hover::after{
+            width: 100%;
+            transition: width 0.4s linear;
+        }
+
+        #menu{
+          
+            display: flex;
+            justify-content: end;
+            padding-bottom: 28px;
+            padding-top:28px;
+            padding-right: 30px;
+         
+        }
+
+        #span{
+            color:black;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 39px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #texto{
+       
+     
+            height: 160vh;
+            width: 100%;
+       
+            margin-bottom: 200px;
+            flex-direction: column;
+            background: url("{% static 'media/images8.jpeg' %}");
+            background-size: cover;
+            
+        }
+
+
+        button{
+            background-color: #ff7200;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 13px 33px 13px 33px ;
+            transition: 0.5s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+        #menu{
+          
+            display: flex;
+            justify-content: end;
+            padding-bottom: 28px;
+            padding-top:28px;
+            padding-right: 30px;
+         
+        }
+
+        #span{
+            color: rgb(20, 20, 20);
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 42px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+
+            bottom: -35%;
+            
+          
+        }
+    
+
+        h4{
+            padding-top: 22px;
+            
+            color:rgb(22, 20, 20);
+            color: white;
+        }
+
+
+        #simbolo2{
+            background-color: white;
+            width: 46px;
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 52px;
+        }
+
+        p{
+            margin: 27px;
+            font-size: 23px;
+            color: #3d3d3d;
+            line-height: 30px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+        #form{
+            margin-bottom: 150px;
+        }
+
+        #tema2{
+            height: 32rem;
+     
+           width: 36rem;
+           transition: transform 0.5s ease-in-out;
+           background: rgb(246, 246, 247);
+           cursor: pointer;
+            
+
+           border-radius: 19px;
+            border-radius: 20px 20px 20px 20px;
+            border-bottom: none;
+        }
+
+        #texto_conteudo{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        img{
+            
+            width: 37rem;
+            border-radius: top 10px;
+            height:32rem ;
+            border-radius: 15px 15px 10px 10px;
+            
+        }
+
+        h3{
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            padding-top: 40px;
+            margin-bottom: 40px;
+
+        }
+
+                #img{
+            height: 60rem;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+      <div id="nav">
+            <div id="icon">
+                <h2 id="logo">LinkBank🌐</h2>
+            </div>
+
+            <div id="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}" id="a">Pagina inicial</a></li>
+                    <li><a href="{% url 'serviço' %}" id="a">Serviços</a></li>
+                    <li><a href="{% url 'sobre' %}" id="a1">Sobre-nos</a></li>
+                    <li><a href="{% url 'contata' %}" id="a" >Contata-nos</a></li>
+                    <li><a href="{% url 'formulario' %}" id="a">Criar-Conta</a></li>
+                    
+                </ul>
+
+            </div>
+          
+        </div>
+     
+    
+           
+        <div id="texto">
+          <span  id="span">Aproveita saber mais sobre nós dos<br> nossos programadores, S.O e os <br>obejetivos da nossa plataforma  </span>
+          
+        </div>
+    
+
+   
+
+        
+
+
+
+            <div id="conteudo">
+            <div id="texto_conteudo">
+        <div id="form"> 
+            
+            <div id="tema">
+      
+            <img src="{% static 'media/imagem4.jpeg' %}" alt=""></div>
+
+            
+        </div>
+
+    <div id="form"> 
+ 
+            <div id="tema2">
+            
+            
+            <h3>Nosso S.O</h3>
+           <P>
+Lorem ipsum dolor sit amet, consectetur adipisicing <br>elit. Fugit,  Este é uma site que tem  no  gerenciamento de<br> or sit amet, consectetur adipisicing elit. Fugit, <br>amet, consectetur adipisicing elit. Fugit,  <br> consequuntur est at sint deleniti eveniet<br> pariatur dolorum earum enim illo perferendis, ab,<br> Este é uma site que tem  no  gerenciamento de<br>odit sed minus? Ipsam nostrum nemo omnis consectetur!<br>  recursos finaceiros, na procura </p> </div>
+        </div>
+
+
+    </div>
+    </div>
+    <div id="texto_conteudo">
+
+
+        <div id="form"> 
+
+            
+            <div id="tema2">
+           <h3>Programadores</h3>
+           <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing <br>elit. Fugit,  Este é uma site que tem  no  gerenciamento de<br> or sit amet, consectetur adipisicing elit. Fugit, <br>amet, consectetur adipisicing elit. Fugit,  <br> consequuntur est at sint deleniti eveniet<br> pariatur dolorum earum enim illo perferendis, ab,<br> Este é uma site que tem  no  gerenciamento de<br>odit sed minus? Ipsam nostrum nemo omnis consectetur!<br>  recursos finaceiros, na procura </p> </div>
+
+        </div>
+
+        <div id="form"> 
+
+            <div id="tema">
+            <img src="{% static 'media/images10.jpeg' %}" alt="">             
+          </div>
+    
+        </div>
+
+    </div>
+
+        <div id="texto_conteudo">
+                    <div id="form"> 
+
+            <div id="tema">
+        
+           <img src="{% static 'media/images9.jpeg' %}" alt=""></div>
+          
+        </div>
+        <div id="form"> 
+     
+            <div id="tema2">
+           
+        
+        
+         <h3>Objetivos</h3>
+           <p> Lorem ipsum dolor sit amet, consectetur adipisicing <br>elit. Fugit,  Este é uma site que tem  no  gerenciamento de<br> or sit amet, consectetur adipisicing elit. Fugit, <br>amet, consectetur adipisicing elit. Fugit,  <br> consequuntur est at sint deleniti eveniet<br> pariatur dolorum earum enim illo perferendis, ab,<br> Este é uma site que tem  no  gerenciamento de<br>odit sed minus? Ipsam nostrum nemo omnis consectetur!<br>  recursos finaceiros, na procura </p></div>
+        </div>
+
+
+        </div>
+        </div>
+</body>
+</html>

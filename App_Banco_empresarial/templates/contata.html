@@ -1,0 +1,430 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkBank🌐</title>
+    <style>
+       @font-face {
+            font-family: 'logotipo';
+            src: url("{% static 'media/logotype.otf' %}") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'astra';
+            src: url("{% static 'media/Astra.otf' %}") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }        
+         *{
+            margin: 0;
+      
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+
+        body{
+            background-color: white;
+        
+            
+
+        }
+
+                #nav{
+            background-color: #CBD2D9;
+       background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+        }
+
+
+           .main{
+            width: 100%;
+            background:url("{% static 'media/contata1 (2).jpeg' %}");
+            background-position: center;
+            background-size:cover;
+            height: 160vh;
+        }
+
+        #icon{
+        width: 200px;
+        height: 65px;
+        float: left;
+        }
+
+        #logo{
+            position: fixed;
+            color: blue;
+            font-size: 32px;
+            padding-top: 17px;
+            font-family: logotipo;
+            margin-left: 50px;
+        }
+        ul{
+            display: flex;
+            gap: 75px;
+            margin-right: 65px;
+            align-items: center;
+        }
+        li{
+            list-style: none;
+            font-size: 18px;
+      
+        }
+        a{
+            text-decoration: none;
+            color: rgb(71, 70, 70);
+           
+            font-family: Arial;
+            transition: 0.4s ease-in-out;
+
+        }
+
+        #a:hover{
+            color: blue;
+            
+      
+        }
+
+        #a::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 0;
+            background-color: blue;
+            transition: 0.3s;
+
+        }
+
+        #a1::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 100%;
+            background-color: blue;
+            transition: 0.3s;
+
+        }
+
+        #a1{
+            color: blue;
+        }
+
+        #a:hover::after{
+            width: 100%;
+            transition: width 0.4s linear;
+        }
+
+        #menu{
+          
+            display: flex;
+            justify-content: end;
+            
+            padding-bottom: 28px;
+            padding-top:28px;
+            padding-right: 30px;
+         
+        }
+
+        #span{
+            color:black;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 39px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #texto{
+            margin: auto;
+            position: relative;
+            height: auto;
+            
+            width: 1200px;
+           position: relative;
+           top: -100%;
+            flex-direction: column;
+            
+        }
+
+        p{
+            color: rgb(34, 33, 33);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            margin-bottom: 55px;
+            margin-left: 20px;
+            line-height: 25px;
+            padding-top: 25px;
+            padding-bottom:30px ;
+        }
+        button{
+            background-color: #ff7200;
+            
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 13px 33px 13px 33px ;
+            transition: 0.5s ease-in-out;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        #bt:hover{
+            color: white;
+            background-color: blue;
+
+        }
+        #bt{
+            padding: 13px 90px 13px 92px ;
+        }
+        button:hover{
+            background: blue;
+        }
+
+        form{
+           height: 470px;
+           
+           width: 390px;
+           transition: transform 0.5s ease-in-out;
+           background:  linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+           
+           cursor: pointer;
+           right: -65%;
+           top: -42%;
+          
+           position: relative;
+           display: flex;
+           flex-direction: column;
+           border-radius: 19px;
+        }
+
+        h3{
+            
+            font-size: 26px;
+        
+            color: white;
+            font-family: sans-serif;
+           
+            
+            
+            margin-top: 4px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            
+            padding-top: 30px;
+        }
+
+        input{
+            height: 33px;
+            width: 255px;
+            background: transparent;
+           
+            border: solid 2.5px blue ;
+            border-radius: 4px;
+            font-size: 16px;
+            color: rgb(37, 37, 37);
+            
+           background-color: rgb(255, 255, 255,0.7);
+            margin-bottom: 27px;
+ 
+            padding: 7px;
+        }
+
+
+
+        h4{
+            padding-top: 22px;
+            
+            color:rgb(22, 20, 20);
+            color: white;
+        }
+
+        #simbolo{
+          margin-left:-40px;
+          margin-bottom:-7px;
+        }
+        #simbolo_recl{
+          margin-left:-43px;
+          margin-bottom:46px;
+        }
+        textarea{
+            height: 65px;
+            padding-top: 10px;
+            width: 262px;
+            background: transparent;
+            border: solid 2.5px blue;
+            border-radius: 4px;
+            color: rgb(37, 37, 37);
+           
+            background-color: rgb(255, 255, 255,0.7);
+      
+            font-size: 17px;
+            padding-left: 7px;
+            
+           
+            margin-top: 19px;
+            margin-bottom: 25px;
+            
+           
+          
+        }
+
+        #texto2{
+            margin: auto;
+            position: relative;
+            height: auto;
+            width: 1200px;
+            margin-top: -100%;
+            flex-direction: column;
+            
+        }
+
+        #ligacao{
+            color: blue;
+            font-size: 25px;
+            font-weight: bold;
+
+        }
+        #valor{
+            margin-top: -10px;
+            color: rgb(36, 35, 35);
+            font-size: 13px;
+        }
+        #simbolo2{
+            background-color: white;
+            width: 44px;
+            padding: 16px;
+            border-radius: 110px;
+            margin-bottom: 50px;
+        }
+
+        #texto2{
+            margin-left: 150px;
+            
+           margin-top: 5rem;
+
+           
+        }
+        #texto2 div{
+            display: flex;
+            
+        }
+
+        #texto2 div div{
+           display: flex;
+           flex-direction: column;
+           margin-top: 10px;
+           margin-left: 30px;
+        }
+
+        #img{
+            height: 60rem;
+            width: 100%;
+        }
+
+        #serviço{
+            text-align: center;
+            font-size: 38px;
+            margin-top: 55px;
+        }
+
+   
+     
+
+
+
+</style>
+</head>
+<body>
+     <div id="nav">
+            <div id="icon">
+                <h2 id="logo">LinkBank🌐</h2>
+            </div>
+
+            <div id="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}" id="a">Pagina inicial</a></li>
+                    <li><a href="{% url 'serviço' %}" id="a">Serviços</a></li>
+                    <li><a href="{% url 'sobre' %}" id="a">Sobre-nos</a></li>
+                    <li><a href="{% url 'contata' %}" id="a1" >Contata-nos</a></li>
+                    <li><a href="{% url 'formulario' %}" id="a">Criar-Conta</a></li>
+                    
+                </ul>
+
+            </div>
+          
+        </div>
+       
+        
+       <img id="img" src="{% static 'media/contata2.jpeg' %}" alt="">
+        <h5 id="serviço">Conheça os nossos serviços</h5>
+        <p>Aproveite criar a sua conta para explorar  os nossos serviços</p>
+
+        <div class="main">
+                   
+        
+    
+      
+         <div id="texto">
+          <span  id="span">Podes nos contatar para te <br> ajudar em qualquer problema ou se quiseres <br>  fazer uma critica do nossos serviços </span>
+          
+        </div>
+        <div id="texto2">
+           <div>
+            <img id='simbolo2' src="{% static 'media/localização.png' %}"/>
+            <div>
+                <span id="ligacao">ENDEREÇO</span>
+                <h4 id="valor">Luanda, Bairro Palanca <br>
+                Rua A1 <br>
+                210</h4>
+            </div>
+           </div>
+
+           <div>
+            <img id='simbolo2' src="{% static 'media/bx-envelope.svg' %}"/>
+            <div>
+                <span id="ligacao">E-MAIL</span>
+                <h4 id="valor">Adriel2000@gmail.com</h4>
+            </div>
+           </div>
+
+           <div>
+            <img id='simbolo2' src="{% static 'media/bx-phone.svg' %}"/>
+            <div>
+                <span id="ligacao">TELEFONE</span>
+                <h4 id="valor">934562786</h4>
+            </div>
+           </div>
+        </div>
+
+        <form action="{% url 'resultado_login' %}" method="post"> {% csrf_token %}
+            <center>
+            <h3>ENVIAR E-MAIL</h3>
+            <input type="text" placeholder="Nome" name="nif" >
+            <img id='simbolo' src="{% static 'media/bx-user.svg' %}"/>
+            <input type="email" placeholder="E-MAIL" name="email">
+            <img id='simbolo' src="{% static 'media/bx-envelope.svg' %}"/>
+            <textarea name="duvida" id="" placeholder="MENSAGEM"></textarea>
+            <img id='simbolo_recl' src="{% static 'media/bx-message-rounded-detail.svg' %}"/>
+            
+            
+            <button id="bt">ENVIAR</button>
+            </center>
+            
+            
+        </form>
+    </div>
+   
+</body>
+</html> 

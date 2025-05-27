@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #v{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 2px;
+            
+        }
+
+        #rev{
+            color:rgb(90, 89, 89);
+            margin:3px ;
+            
+        }
+
+        ul{
+            display: flex;
+            
+            
+        }
+        #tema{
+            
+            font-style: italic;
+            color:rgb(105, 104, 104);
+            margin-bottom: 30px;
+        }
+        nav{
+            display: flex;
+            justify-content: end;
+            background-color: rgb(7, 7, 44);
+            padding: 20px;
+            margin-bottom: 50px;
+
+        }
+        a{
+            text-decoration: none;
+            list-style: none;
+            margin-right: 30px;
+        
+            color: rgb(226, 223, 223);
+            padding: 7px;
+            cursor: pointer;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul type="none">
+          <li><a href="{% url 'resultado_login' %}">HOME</a></li>
+          <li><a href="{% url 'publicacao' %}">PUBLICAÇÃO</a></li>
+          <li><a href="{% url 'tranferencia' %}">TRANSFERENCIA</a></li>
+          <li><a href="{% url 'recebido' %}"></a>Empresa</li>
+          <li><a href="{% url 'editar' %}">EDITAR</a></li>
+          <li><a href="{% url 'chates' %}">Marteking</a></li>
+          <li><a href="{% url 'chates' %}">CHATES</a></li>
+
+        </ul>
+      </nav>
+
+      <div class="logotipo">
+        
+        
+        <h1 id="tema">Bem vindo senhor/a   {{Nome}}</h1>
+        <div>
+
+   
+   
+    <a href="{% url 'dados' %}" color="black">Dados-Pessoal</a>
+ 
+    <a href="{% url 'teste_saldo' %}" color="black">Saldo</a>
+   
+    
+
+    <h4>{{Nconta2}}</h4>
+   
+</div>
+<br>
+<a href="{% url 'home' %}">Voltar</a>
+
+
+
+<script>
+
+
+</script>
+
+</body>
+</html>
+    
+    

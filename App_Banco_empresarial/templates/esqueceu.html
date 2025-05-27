@@ -1,0 +1,339 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIAR CONTA</title>
+    <style>
+         @font-face {
+            font-family: 'logotipo';
+            src: url("{% static 'media/logotype.otf' %}") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'astra';
+            src: url("{% static 'media/Astra.otf' %}") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
+
+        body{
+            background: #F2F4F7;
+            height: 63rem;
+            
+
+        }
+
+        .main{
+            width: 100%;
+            
+            background-position: center;
+            background-size:cover;
+            height: 90vh;
+        }
+        nav{
+            display: flex;
+          height: 75px;
+          width: 1200px;
+          margin: auto;
+          justify-content: space-between;
+        }
+
+
+     
+     
+
+        #logo{
+            color: blue;
+            font-size: 50px;
+            margin-bottom: 5px;
+            padding-top: 30px;
+            display: flex;
+           justify-content: center;
+           font-family: logotipo;
+          
+        }
+        ul{
+            display: flex;
+            gap: 67px;
+            align-items: center;
+        }
+        li{
+            list-style: none;
+            margin-top: 27px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-family: Arial;
+            transition: 0.1s ease-in-out;
+
+        }
+
+        #a:hover{
+            color: blue;
+            
+      
+        }
+
+        #a::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 0;
+            background-color: blue;
+            
+
+        }
+
+        #a1::after{
+            content: "";
+            height: 4px;
+            margin: auto;
+            display: block;
+            width: 100%;
+            background-color: blue;
+            transition: 0.3s;
+
+        }
+
+        #a1{
+            color: blue;
+        }
+
+        #a:hover::after{
+            width: 100%;
+            transition: width 0.3s linear;
+        }
+
+        #menu{
+            padding-top: 10px;
+        }
+
+        #span{
+            color: #ff7200;
+            
+            font-size: 37px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #span{
+            color: #ff7200;
+            display: flex;
+            justify-content: center;
+            font-size: 37px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #texto{
+            margin: auto;
+            position: relative;
+            height: auto;
+            width: 1200px;
+            margin-top: 11%;
+            flex-direction: column;
+            
+        }
+
+        p{
+            color: rgb(48, 47, 47);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            margin-left: 20px;
+            line-height: 25px;
+            padding-top: 25px;
+            padding-bottom:30px ;
+        }
+        button{
+            background-color: rgb(11, 179, 11);
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 13px 33px 13px 33px ;
+            transition: 0.5s ease-in-out;
+            border: none;
+            cursor: pointer;
+            margin-left: 11px;
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+        #bt:hover{
+      
+            background-color: blue;
+
+        }
+        #bt{
+            padding: 13px 94px 13px 94px ;
+        }
+        button:hover{
+            background: blue;
+        }
+
+        #form{
+           height: 85%;
+           width: 30%;
+        
+           display:flex;
+           justify-content: center;
+           margin: auto;
+           margin-bottom: 50px;
+           position: relative;
+           
+
+           border-radius: 11px;
+
+           background: white;
+      
+           box-shadow: 1px 1px 20px rgb(66, 66, 66);
+
+        
+        }
+
+        h3{
+            width: 290px;
+            font-size: 28px;
+            font-weight: bold;
+            color: black;
+            font-family: sans-serif;
+            text-align: center;
+            
+            margin-left: 8px;
+            margin-top: 25px;
+            margin-bottom: 13px;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        input{
+            height: 33px;
+            width: 240px;
+            background: transparent;
+            border: solid 1.5px blue ;
+    
+            font-size: 16px;
+            color: black; 
+
+      
+       
+            padding: 7px;
+            border-radius: 5px;
+            
+        }
+
+
+
+        h4{
+            padding-top: 10px;
+            
+            color:rgb(22, 20, 20);
+          
+        }
+
+        #simbolo{
+          margin-left:-36px;
+          margin-bottom:-7px;
+        }
+
+
+
+        #esq{
+            color: blue;
+        }
+
+
+
+
+
+        #menu2{
+
+            width: 29.3%;
+            height: 3.2%;
+            
+            border-radius: 15px;
+            border: solid 3.5px rgb(88, 88, 88);
+            padding: 1px 15px 15px 15px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        h4{
+            color: rgb(34, 33, 33);
+        }
+
+        #esq{
+            color: blue;
+           
+        }
+
+        #ou{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+    <center>
+
+   
+                <h2 id="logo">LinkBank🌐</h2>
+
+
+
+
+    
+
+           
+            <p>A criação da sua conta é rapido e facil , para usufruires os nossos serviços</p> 
+          
+       </center>   
+     
+          <div id="form"> 
+            <center>
+      
+ 
+            <div id="formo1">
+        <form action="{% url 'codigo' %}" method="post" > {% csrf_token %}
+            <center>
+            <h3>NOVA SENHA</h3>
+           
+            <input type="number" name="telef1" name="numero" placeholder="Telefone">
+            <img id='simbolo' src="{% static 'media/bx-phone.svg' %}"/>
+        <h4 id="ou">OU</h4>
+            <input type="email" id="email" placeholder="E-MAIL" name="email">
+            <img id='simbolo' src="{% static 'media/bx-user.svg' %}"/>
+            <center><button id="bt">ENVIAR</button></center>
+            <h4 >Se esquiseres fazer login <br> <a href="{% url 'home' %}" id="esq">Clica Aqui</a></h4>
+            </center>
+            
+        </form>
+            </div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
